@@ -1,0 +1,24 @@
+{
+  "name": "6657-bulletchat-collector",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "collector": "tsx src/collector-cli.ts",
+    "collect": "tsx src/collect.ts",
+    "collect:6657": "tsx src/collect.ts --room 6657",
+    "stats": "tsx src/stats-cli.ts",
+    "weight": "tsx src/weight-corpus.ts",
+    "test": "node --import tsx --test src/clean.test.ts src/jsonl.test.ts src/stats.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@node-rs/jieba": "latest",
+    "douyudm": "^3.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
