@@ -1,0 +1,195 @@
+{
+  "source": "sb6657",
+  "crawled_at": "2026-05-22T13:42:39.894Z",
+  "tags": [
+    {
+      "dictCode": null,
+      "dictLabel": "喷玩机器",
+      "dictValue": "00",
+      "dictType": "machine_tags",
+      "iconUrl": null
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "喷选手",
+      "dictValue": "01",
+      "dictType": "machine_tags",
+      "iconUrl": null
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "加一",
+      "dictValue": "02",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d4204f88c538a9b5bdac11.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "QUQU",
+      "dictValue": "03",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic.imgdb.cn/item/67360ab1d29ded1a8cc2da4e.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "木柜子",
+      "dictValue": "05",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67da37f288c538a9b5c05edb.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "群魔乱舞",
+      "dictValue": "06",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic.imgdb.cn/item/67360ab1d29ded1a8cc2da08.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "NiKo",
+      "dictValue": "07",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d3ddcb88c538a9b5bd4c86.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "ropz",
+      "dictValue": "08",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d3e99988c538a9b5bd6f01.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "直播间互喷",
+      "dictValue": "09",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d5204188c538a9b5be6347.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "Donk",
+      "dictValue": "10",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d3e0f288c538a9b5bd552c.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "伟伟",
+      "dictValue": "11",
+      "dictType": "machine_tags",
+      "iconUrl": null
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "Zywoo",
+      "dictValue": "12",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d41c6288c538a9b5bdaadb.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "m0NESY",
+      "dictValue": "13",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d41c6288c538a9b5bdaad9.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "丰川祥子",
+      "dictValue": "14",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d419eb88c538a9b5bdaa1d.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "device",
+      "dictValue": "15",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d41c6288c538a9b5bdaada.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "Twistzz",
+      "dictValue": "16",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d41c6288c538a9b5bdaadc.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "DOTA",
+      "dictValue": "17",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d3def388c538a9b5bd4ff2.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "千早爱音",
+      "dictValue": "18",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d41c6288c538a9b5bdaadd.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "三角初华",
+      "dictValue": "19",
+      "dictType": "machine_tags",
+      "iconUrl": "https://pic1.imgdb.cn/item/67d3f1fd88c538a9b5bd8427.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "Falcons",
+      "dictValue": "20",
+      "dictType": "machine_tags",
+      "iconUrl": "https://oss.5eplay.com/cloudx/p/sport/csgo/team/cm0k2q4conkqks63d37g.png?x-oss-process=image/indexcrop,x_300,i_1/resize,h_150,m_lfit"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "S1mple",
+      "dictValue": "21",
+      "dictType": "machine_tags",
+      "iconUrl": "https://oss.5eplay.com/cloudx/p/sport/csgo/player/csb2fo4conkotam819fg.png"
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "赛事梗",
+      "dictValue": "22",
+      "dictType": "machine_tags",
+      "iconUrl": null
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "京介",
+      "dictValue": "23",
+      "dictType": "machine_tags",
+      "iconUrl": null
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "HLTV",
+      "dictValue": "24",
+      "dictType": "machine_tags",
+      "iconUrl": null
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "Team Spirit",
+      "dictValue": "25",
+      "dictType": "machine_tags",
+      "iconUrl": null
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "chopper",
+      "dictValue": "26",
+      "dictType": "machine_tags",
+      "iconUrl": null
+    },
+    {
+      "dictCode": null,
+      "dictLabel": "🗿🗿🗿",
+      "dictValue": "27",
+      "dictType": "machine_tags",
+      "iconUrl": null
+    }
+  ]
+}

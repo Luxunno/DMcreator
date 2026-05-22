@@ -7,8 +7,10 @@
     "collector": "tsx src/collector-cli.ts",
     "collect": "tsx src/collect.ts",
     "collect:6657": "tsx src/collect.ts --room 6657",
+    "crawl:memes": "tsx crawl-sb6657.ts",
     "stats": "tsx src/stats-cli.ts",
     "weight": "tsx src/weight-corpus.ts",
+    "prepare:train": "tsx src/prepare-training-corpus.ts",
     "test": "node --import tsx --test src/clean.test.ts src/jsonl.test.ts src/stats.test.ts",
     "typecheck": "tsc --noEmit"
   },

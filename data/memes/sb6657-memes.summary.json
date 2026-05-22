@@ -1,0 +1,22 @@
+{
+  "source": "sb6657",
+  "source_url": "https://sb6657.cn/#/memes/AllBarrage",
+  "crawled_at": "2026-05-22T13:42:39.894Z",
+  "api_base_url": "https://hguofichp.cn:10086",
+  "total_records": 20274,
+  "tag_count": 27,
+  "hot_24h_count": 10,
+  "hot_7d_count": 50,
+  "cluster_counts": {
+    "c": 10140,
+    "s": 406,
+    "a": 3648,
+    "b": 6080
+  },
+  "output_files": {
+    "memes_jsonl": "data/memes/sb6657-memes.jsonl",
+    "tags_json": "data/memes/sb6657-tags.json",
+    "summary_json": "data/memes/sb6657-memes.summary.json"
+  },
+  "weight_formula": "精品库权重: raw_weight=(0.55*curated_base+0.22*capped_log(copy_count)+0.15*heat_score+0.08*tag_score)*length_factor; copy/heat 只增强排序，不作为低质过滤；final weight=max(0.35, 0.35+minmax(raw_weight)*0.65*cluster_multiplier)"
+}

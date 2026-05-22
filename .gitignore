@@ -1,5 +1,9 @@
 node_modules/
-data/
+data/*
+!data/memes/
+!data/memes/**
+!data/training/
+!data/training/**
 logs/
 .collector/
 .tmp-tests/

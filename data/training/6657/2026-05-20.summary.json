@@ -1,0 +1,68 @@
+{
+  "room_id": "6657",
+  "date": "2026-05-20",
+  "inputs": {
+    "weighted": "data\\weighted\\6657\\2026-05-20.jsonl",
+    "memes": "data\\memes\\sb6657-memes.jsonl"
+  },
+  "outputs": {
+    "core": "data\\training\\6657\\2026-05-20.core.jsonl",
+    "retrieval": "data\\training\\6657\\2026-05-20.retrieval.jsonl",
+    "sft_messages": "data\\training\\6657\\2026-05-20.sft-messages.jsonl",
+    "rejected": "data\\training\\6657\\2026-05-20.rejected.jsonl"
+  },
+  "source_counts": {
+    "weighted_input": 4681,
+    "meme_input": 20274,
+    "candidates": 24453,
+    "accepted": 23846,
+    "rejected": 607,
+    "core": 6000,
+    "retrieval": 12000
+  },
+  "accepted_by_source": {
+    "sb6657_meme": 19401,
+    "live_weighted": 4445
+  },
+  "core_by_category": {
+    "喷玩机器": 1925,
+    "木柜子": 1336,
+    "喷选手": 854,
+    "群魔乱舞": 835,
+    "加一": 542,
+    "直播间互喷": 201,
+    "NiKo": 99,
+    "高频爆发复读": 41,
+    "QUQU": 37,
+    "device": 24,
+    "丰川祥子": 22,
+    "Donk": 16,
+    "Twistzz": 13,
+    "DOTA": 9,
+    "Zywoo": 8,
+    "赛事梗": 7,
+    "ropz": 7,
+    "HLTV": 7,
+    "m0NESY": 6,
+    "Falcons": 4,
+    "伟伟": 2,
+    "S1mple": 2,
+    "千早爱音": 2,
+    "Team Spirit": 1
+  },
+  "rejected_by_reason": {
+    "risk_high": 44,
+    "symbol_only": 103,
+    "number_only": 51,
+    "too_short": 99,
+    "too_long_for_retrieval": 335
+  },
+  "rules": [
+    "保留 emoji 和标点，仅移除控制字符并压缩异常空白。",
+    "站点梗视为精品来源，不因 copy_count 低被过滤；copy_count 只影响排序权重。",
+    "直播监听样本 total_count < 2 不进入训练或检索。",
+    "core 集限制 2-90 字，优先 70 字以内高复读短句。",
+    "retrieval 集限制 160 字以内。",
+    "明显 URL、联系方式、隐私、人身攻击、歧视、露骨性内容、自伤内容进入 rejected。"
+  ]
+}
