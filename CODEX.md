@@ -2,7 +2,7 @@
 
 ## 当前目标
 
-这个仓库已经准备好 6657 弹幕风格 LoRA 的第一版训练数据。下一台训练机器的目标是：下载仓库后，直接基于 `sft-messages.jsonl` 开始 Qwen 系列模型 LoRA/QLoRA 实验。
+这个仓库已经准备好 6657 弹幕风格 LoRA 的全量训练数据。下一台训练机器的目标是：下载仓库后，直接基于 `sft-messages.jsonl` 开始 Qwen 系列模型 LoRA/QLoRA 实验。
 
 ## 推荐训练入口
 
@@ -18,8 +18,8 @@
 
 辅助数据：
 
-- `data/training/6657/2026-05-20.core.jsonl`：清洗后的核心风格样本。
-- `data/training/6657/2026-05-20.retrieval.jsonl`：运行时 RAG 检索库。
+- `data/training/6657/2026-05-20.core.jsonl`：清洗后的全量 SFT 核心样本。
+- `data/training/6657/2026-05-20.retrieval.jsonl`：运行时 RAG 检索库，当前与全量 core 同步。
 - `data/memes/sb6657-memes.jsonl`：sb6657 精品烂梗库，已重算权重。
 - `data/training/6657/2026-05-20.rejected.jsonl`：被规则过滤的样本，只用于审查过滤策略，不用于训练。
 
@@ -46,14 +46,14 @@ final weight=max(0.35, 0.35+minmax(raw_weight)*0.65*cluster_multiplier)
 
 ## 建议 LoRA 策略
 
-4070 Ti 上先做小步实验，不要一上来多轮猛训。
+当前数据按全量训练准备：`sft-messages.jsonl` 包含 23846 条样本。4070 Ti 上仍建议用 QLoRA 控制显存，但不再只训练 6000 条短句核心集。
 
 推荐默认：
 
 - 基座：Qwen 7B/8B 级 Instruct 模型。
 - 训练方式：4bit QLoRA。
 - LoRA rank：8 或 16。
-- epoch：1。
+- epoch：1 起步；如果欠拟合再加到 2。
 - learning rate：`1e-4` 起步。
 - max sequence length：1024 或 2048。
 - 目标：学习 6657 的短句、emoji、标点、复读节奏，不要求模型单独理解直播场景。
@@ -101,4 +101,3 @@ npm run prepare:train -- --date 2026-05-20
 ```bash
 npm run typecheck
 ```
-

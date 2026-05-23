@@ -74,8 +74,8 @@ interface RejectedRecord {
 const dataDir = readArg('data-dir', 'data') ?? 'data';
 const roomId = readArg('room', '6657') ?? '6657';
 const date = readArg('date', '2026-05-20') ?? '2026-05-20';
-const maxCore = Math.max(1, Math.floor(readNumberArg('max-core', 6000)));
-const maxRetrieval = Math.max(1, Math.floor(readNumberArg('max-retrieval', 12000)));
+const maxCore = Math.max(1, Math.floor(readNumberArg('max-core', 25000)));
+const maxRetrieval = Math.max(1, Math.floor(readNumberArg('max-retrieval', 25000)));
 
 const weightedPath = join(dataDir, 'weighted', roomId, `${date}.jsonl`);
 const memesPath = join(dataDir, 'memes', 'sb6657-memes.jsonl');
@@ -145,7 +145,6 @@ function textKey(text: string): string {
 function rejectReasons(record: TrainingRecord): string[] {
   const reasons: string[] = [];
   if (record.metrics.length < 2) reasons.push('too_short');
-  if (record.metrics.length > 90 && record.quality_tier === 'core') reasons.push('too_long_for_core');
   if (record.metrics.length > 160) reasons.push('too_long_for_retrieval');
   if (record.metrics.risk_score >= 0.45) reasons.push('risk_high');
   if (record.source === 'live_weighted' && (record.counts.total ?? 0) < 2) reasons.push('repeat_count_lt_2');
@@ -168,8 +167,8 @@ function toLiveRecords(records: WeightedInputRecord[], maxWeight: number): Train
       source: 'live_weighted',
       source_id: record.cluster_id ?? textKey(text),
       tags: [record['分类'] || '直播复读'],
-      quality_tier: length <= 70 && (record.total_count ?? 0) >= 3 ? 'core' : 'retrieval',
-      use_for_sft: length <= 70 && (record.total_count ?? 0) >= 3,
+      quality_tier: length <= 160 && (record.total_count ?? 0) >= 2 ? 'core' : 'retrieval',
+      use_for_sft: length <= 160 && (record.total_count ?? 0) >= 2,
       use_for_retrieval: true,
       counts: {
         total: record.total_count,
@@ -204,8 +203,8 @@ function toMemeRecords(records: MemeInputRecord[], maxWeight: number): TrainingR
       source: 'sb6657_meme',
       source_id: record.id,
       tags: record.tag_labels?.length ? record.tag_labels : [category],
-      quality_tier: length <= 70 ? 'core' : 'retrieval',
-      use_for_sft: length <= 70,
+      quality_tier: length <= 160 ? 'core' : 'retrieval',
+      use_for_sft: length <= 160,
       use_for_retrieval: true,
       counts: {
         copy: copyCount,
@@ -359,8 +358,8 @@ await fs.writeFile(
         '保留 emoji 和标点，仅移除控制字符并压缩异常空白。',
         '站点梗视为精品来源，不因 copy_count 低被过滤；copy_count 只影响排序权重。',
         '直播监听样本 total_count < 2 不进入训练或检索。',
-        'core 集限制 2-90 字，优先 70 字以内高复读短句。',
-        'retrieval 集限制 160 字以内。',
+        '全量训练模式：core/SFT 集保留 160 字以内的有效精品梗，不再只截取短句。',
+        'retrieval 集同样保留 160 字以内有效样本。',
         '明显 URL、联系方式、隐私、人身攻击、歧视、露骨性内容、自伤内容进入 rejected。',
       ],
     },
